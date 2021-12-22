@@ -1,0 +1,25 @@
+{
+  "name": "desafiotecnicolojaintegrada",
+  "version": "1.0.0",
+  "description": "Desafio Tecnico desenvolvido para o processo seletivo da vaga de QA",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx cypress open"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/laisdutra/DesafioTecnicoLojaIntegrada.git"
+  },
+  "author": "Lais Dutra",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/laisdutra/DesafioTecnicoLojaIntegrada/issues"
+  },
+  "homepage": "https://github.com/laisdutra/DesafioTecnicoLojaIntegrada#readme",
+  "devDependencies": {
+    "cypress": "^9.2.0"
+  },
+  "dependencies": {
+    "cypress-xpath": "^1.6.2"
+  }
+}
