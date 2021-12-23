@@ -21,3 +21,22 @@ Cypress.Commands.add('GoToImages', () => {
     cy.get('#corpo .categoria-id-15610614 [href="https://qastoredesafio.lojaintegrada.com.br/categoria/15610614.html"]').click()
     cy.get('.conteudo .titulo.cor-secundaria').should('contain', 'IMAGEM')
 })
+
+Cypress.Commands.add('AddCoupon', (Coupon) => {
+    cy.get('#usarCupom').should('exist')
+    cy.get('#usarCupom').type(Coupon)
+    cy.contains('Usar cupom').should('exist')
+    cy.contains('Usar cupom').click()
+    cy.contains('Cupom de desconto').should('exist')
+})
+
+Cypress.Commands.add('Checkout', () => {
+    cy.contains('Finalizar compra').should('exist')
+    cy.contains('Finalizar compra').click()
+    cy.get('#idEnderecoPrincipal1').should('exist')
+    cy.get('#idEnderecoPrincipal1').click()
+    cy.get('#formaEnvio2-pac').click()
+    cy.get('#radio-mercadopagov1-520160').click()
+    cy.get('#finalizarCompra').should('exist')
+    cy.get('#finalizarCompra').click()
+})
