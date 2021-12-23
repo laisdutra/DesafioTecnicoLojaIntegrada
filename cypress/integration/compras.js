@@ -11,6 +11,11 @@ describe('Coupons Scenarios', () => {
         cy.get('.principal .acoes-produto .comprar .botao').click()
     })
 
+    it('Sem cupom', () => {
+
+        cy.Checkout()
+    })
+
     it('Frete grátis', () => {
 
         cy.AddCoupon('FRETEGRATIS')
